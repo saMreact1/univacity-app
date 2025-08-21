@@ -1,0 +1,107 @@
+ion-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: none;
+    border-bottom: 1px solid #D1D1D1;
+
+    div {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        padding: 1rem 1rem 0;
+    }
+
+    ion-toolbar {
+        width: max-content;
+        margin: 0 auto;
+
+        ion-button {
+            color: #454545;
+            font-size: 12px;
+
+            p {
+                display: flex;
+                align-items: center;
+                gap: .2rem;
+                font-weight: 500;
+
+                ion-icon {
+                    font-size: 1rem;
+                }
+
+                span {
+                    display: flex;
+                    align-items: center;
+                    gap: 5px;
+
+                    span {
+                        background-color: #FD6C6C;
+                        color: #fff;
+                        width: 14px;
+                        height: 14px;
+                        font-size: 10px;
+                        padding: 2px 4px;
+                        border-radius: 50%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.custom-search {
+    --background: #fff;
+    --border-radius: 8px;
+    --inner-padding-end: 8px;
+    --min-height: 50px;
+    flex: 1;
+    margin: 6px 12px;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+
+    ion-label {
+        font-size: 12px;
+        color: #5D5D5D;
+        margin-bottom: 2px;
+    }
+
+    ion-input {
+        font-size: 14px;
+        font-weight: 500;
+        color: #454545;
+    }
+
+    ion-icon {
+        font-size: 18px;
+        color: #454545;
+    }
+}
+
+ion-content {
+    overflow-x: auto;
+}
+
+.filters {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 6px;
+    margin-top: 1rem;
+    overflow-x: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none; 
+
+    .filters::-webkit-scrollbar {
+        display: none;
+    }
+
+    ion-chip {
+        min-width: max-content;
+        background-color: #F6F6F6;
+        color: #5D5D5D;
+        font-size: 14px;
+    }
+}

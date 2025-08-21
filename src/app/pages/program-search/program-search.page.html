@@ -1,0 +1,65 @@
+<ion-header>
+  <div>
+    <ion-icon name="arrow-back"></ion-icon>
+    <!-- <ion-searchbar placeholder="What do you want to study?" [(ngModel)]="query" (ngModelChange)="applyFilters()"></ion-searchbar> -->
+    <ion-item class="custom-search" lines="none">
+      <span>
+        <ion-label position="stacked">What do you want to study?</ion-label>
+        <ion-input
+          value="Computer Technologies"
+        >
+        </ion-input>
+      </span>
+      <ion-icon slot="end" name="chevron-down"></ion-icon>
+    </ion-item>
+  </div>
+
+  <ion-toolbar>
+    <ion-buttons>
+      <ion-button fill="none" color="success">
+        <p>
+          <ion-icon name="reorder"></ion-icon>
+          <span>Sort</span>
+        </p>
+      </ion-button>
+
+      <ion-button fill="none" color="success">
+        <p>
+          <ion-icon name="funnel"></ion-icon>
+          <span>Filter <span>3</span></span>
+        </p>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-refresher slot="fixed" (ionRefresh)="load($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+
+  <!-- Filter Chips -->
+  <ion-row class="ion-padding-horizontal filters">
+    <ion-chip *ngFor="let filter of activeFilters">
+      {{ filter }}
+      <ion-icon name="close" (click)="removeFilter(filter)"></ion-icon>
+    </ion-chip>
+  </ion-row>
+
+  <ng-container *ngIf="loading">
+    <div style="padding: 16px;">
+      <ion-skeleton-text animated style="width: 60%; height: 22px;"></ion-skeleton-text>
+      <ion-skeleton-text animated style="width: 90%; height: 100px; margin-top:12px;"></ion-skeleton-text>
+      <ion-skeleton-text animated style="width: 90%; height: 100px; margin-top:12px;"></ion-skeleton-text>
+    </div>
+  </ng-container>
+
+  <ion-list *ngIf="!loading && displayed.length">
+    <app-program-card *ngFor="let p of displayed" [program]="p"></app-program-card>
+  </ion-list>
+
+  <div *ngIf="!loading && !displayed.length" style="padding:24px; text-align:center; opacity:.7;">
+    No programs match your search.
+  </div>
+  
+</ion-content>

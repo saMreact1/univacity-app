@@ -1,0 +1,57 @@
+<!-- <ion-card [routerLink]="['/programs', program?.id]">
+    <ion-item lines="none">
+      <ion-thumbnail class="image-container" slot="start" *ngIf="program?.thumbnail">
+        <ion-img [src]="program!.thumbnail"></ion-img>
+        <ion-badge class="partner-badge">Official Partner</ion-badge>
+      </ion-thumbnail>
+
+      <ion-label>
+        <h2>{{ program?.title }}</h2>
+        <p>{{ program?.university }} • {{ program?.location }}</p>
+      </ion-label>
+
+      <ion-badge slot="end">{{ program?.level }}</ion-badge>
+    </ion-item>
+
+    <ion-card-content>
+      <div style="display:flex; gap:12px; align-items:center; flex-wrap:wrap;">
+        <ion-badge color="medium">{{ program?.mode }}</ion-badge>
+        <ion-badge color="tertiary">{{ program?.duration }}</ion-badge>
+        <ion-badge color="success" *ngIf="program?.tuition">₦{{ program?.tuition }}</ion-badge>
+      </div>
+
+      <ion-icon name="heart-outline" color="success"></ion-icon>
+    </ion-card-content>
+  </ion-card> -->
+
+  <ion-card [routerLink]="['/programs', program?.id]">
+    <div class="image-container">
+      <img class="thumbnail" [src]="program!.thumbnail">
+      <ion-badge class="partner-badge"><ion-icon name="partner"></ion-icon> Official Partner</ion-badge>
+      <img class="u-graz" src="../../../assets/images/u-graz.png">
+    </div>
+
+    <ion-card-header>
+      <ion-card-title>{{ program?.title }}</ion-card-title>
+      <ion-card-subtitle>
+        <ion-icon name="partner"></ion-icon>
+        {{ program?.university }}
+      </ion-card-subtitle>
+    </ion-card-header>
+
+    <ion-card-content>
+      <p class="meta">
+        <span><ion-icon name="location-outline"></ion-icon> {{ program?.location }}</span>
+        <span><ion-icon name="school-outline"></ion-icon> {{ program?.level }}</span>
+        <span><ion-icon name="time-outline"></ion-icon> {{ program?.duration }}</span>
+        <span><ion-icon name="language-outline"></ion-icon> {{ program?.language }}</span>
+      </p>
+      <div class="footer">
+        <h3>€{{ program?.tuition }}/per semester</h3>
+        <div fill="clear">
+          <ion-icon name="share-outline" color="primary"></ion-icon>
+          <ion-icon name="heart-outline" color="primary"></ion-icon>
+        </div>
+      </div>
+    </ion-card-content>
+  </ion-card>
