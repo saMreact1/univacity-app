@@ -6,7 +6,7 @@ import { routes } from './app/app.routes';
 import { AppComponent } from './app/app.component';
 import { provideHttpClient } from '@angular/common/http';
 import { addIcons } from 'ionicons';
-import { arrowBack, checkmarkCircleOutline, chevronDown, close, closeCircle, funnelOutline, heartOutline, languageOutline, locationOutline, reorderThree, reorderThreeOutline, reorderThreeSharp, schoolOutline, shareOutline, shareSocialOutline, swapVertical, timeOutline } from 'ionicons/icons';
+import { arrowBack, calendarOutline, checkmarkCircleOutline, checkmarkDone, chevronBack, chevronDown, chevronForward, chevronUp, close, eyeOutline, funnelOutline, heartOutline, informationCircleOutline, languageOutline, locationOutline, schoolOutline, shareSocialOutline, swapVertical, timeOutline, trendingUp } from 'ionicons/icons';
 
 addIcons({
   'arrow-back': arrowBack,
@@ -20,7 +20,15 @@ addIcons({
   'time-outline': timeOutline,
   'language-outline': languageOutline,
   'share-outline': shareSocialOutline,
-  'chevron-down': chevronDown
+  'chevron-down': chevronDown,
+  'chevron-back': chevronBack,
+  'chevron-up': chevronUp,
+  'eye': eyeOutline,
+  'trending-up': trendingUp,
+  'calendar-outline': calendarOutline,
+  'check': checkmarkDone,
+  'information-circle-outline': informationCircleOutline,
+  'chevron-forward': chevronForward
 });
 
 

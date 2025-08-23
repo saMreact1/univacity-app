@@ -33,7 +33,7 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<div class="content">
   <ion-refresher slot="fixed" (ionRefresh)="load($event)">
     <ion-refresher-content></ion-refresher-content>
   </ion-refresher>
@@ -61,5 +61,4 @@
   <div *ngIf="!loading && !displayed.length" style="padding:24px; text-align:center; opacity:.7;">
     No programs match your search.
   </div>
-  
-</ion-content>
+</div>

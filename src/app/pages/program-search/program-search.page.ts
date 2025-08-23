@@ -16,7 +16,6 @@ import { ProgramCardComponent } from 'src/app/components/program-card/program-ca
     IonSkeletonText, 
     IonRefresherContent,
     IonRefresher,
-    IonContent,
     IonHeader,
     IonToolbar,
     CommonModule,

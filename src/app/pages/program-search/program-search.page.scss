@@ -1,4 +1,5 @@
 ion-header {
+    background-color:#fff;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -80,11 +81,21 @@ ion-header {
     }
 }
 
-ion-content {
-    overflow-x: auto;
+.content {
+    background-color: #fff;
+    --overflow: auto; /* Ionic's way */
+    overflow-x: hidden; /* extra fallback */
+
+    &::-webkit-scrollbar {
+        display: none;
+        -webkit-scrollbar-width: 2px;
+    }
+    -ms-overflow-style: none; /* IE/Edge */
+    scrollbar-width: 2px; /* Firefox */
 }
 
 .filters {
+    background-color: #fff;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;

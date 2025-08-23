@@ -8,6 +8,10 @@ export interface Program {
     language: string;
     duration: string;
     tuition?: number;
+    housing?: number;
+    acceptance?: number;
+    application?: number;
+    living?: number;
     mode: 'Part-time' | 'Fulltime' | string;
     attendance: 'Online' | 'On-Campus' | 'Hybrid' | string;
     thumbnail?: string;

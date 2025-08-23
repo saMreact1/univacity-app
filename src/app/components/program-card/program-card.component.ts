@@ -10,18 +10,15 @@ import { CommonModule, NgIf } from '@angular/common';
   styleUrls: ['./program-card.component.scss'],
   imports: [
     IonBadge, 
-    IonCardContent, 
-    // IonLabel,
-    // IonItem, 
+    IonCardContent,
     IonCard,
     RouterModule,
-    // NgIf,
     CommonModule,
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class ProgramCardComponent  implements OnInit {
-  @Input() program?: Program;
+  @Input() program!: Program;
 
   constructor() { }
 

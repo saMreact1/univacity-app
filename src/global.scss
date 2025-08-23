@@ -35,3 +35,25 @@
 /* @import "@ionic/angular/css/palettes/dark.always.css"; */
 /* @import "@ionic/angular/css/palettes/dark.class.css"; */
 @import '@ionic/angular/css/palettes/dark.system.css';
+
+/* Thin scrollbar */
+::-webkit-scrollbar {
+  width: 4px;   /* makes scrollbar slimmer */
+  height: 4px;  /* for horizontal scroll */
+}
+
+/* Scrollbar track (background) */
+::-webkit-scrollbar-track {
+  background: transparent; /* or use a subtle color if you prefer */
+}
+
+/* Scrollbar thumb (the draggable bar) */
+::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.2); 
+  border-radius: 10px; /* rounded scrollbar */
+}
+
+/* Remove scrollbar arrows (old browsers/Windows) */
+::-webkit-scrollbar-button {
+  display: none;
+}

@@ -1,0 +1,360 @@
+.container  {
+    background-color: #FFFFFF;
+    overflow-y: auto;
+}
+.content-container {
+    padding: 1rem;
+}
+
+.image-container {
+    position: relative;
+    height: 200px;
+
+    .thumbnail {
+        width: 100%;
+        height: 100%;
+    }
+
+    .u-graz {
+        position: absolute;
+        bottom: 10px;
+        left: 10px;
+        width: 48px;
+        height: 48px;
+        border-radius: 12px;
+    }
+
+    .back {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        background-color: #FFFFFF;
+        color: #333;
+        border-radius: 50%;
+        width: 20px;
+        height: 20px;
+        padding: .4rem;
+    }
+
+    div {
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+        display: flex;
+        gap: .5rem;
+
+        ion-icon {
+            background-color: #FFFFFF;
+            color: #333;
+            width: 20px;
+            height: 20px;
+            padding: 8px;
+            border-radius: 50%;
+        }
+    }
+}
+
+.program-info {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    margin-top: .6rem;
+
+    .program {
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 26px;
+        color: #333333;
+    }
+    .school {
+        display: flex;
+        align-items: center;
+        gap: .7rem;
+        color: #666666;
+        font-weight: 500;
+        font-size: 8px;
+
+        div {
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            gap: .2rem;
+        }
+    }
+    ion-card-subtitle {
+        font-size: 16px;
+        font-weight: 400;
+        color: #666666;
+        line-height: 20px;
+    }
+}
+
+.analytics {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 10px;
+    margin: .9rem 0;
+    border-top: 1px solid #D1D1D1;
+    border-bottom: 1px solid #D1D1D1;
+
+    span {
+        color: #5D5D5D;
+        display: flex;
+        font-size: .8rem;
+        align-items: center;
+        gap: .3rem;
+
+        ion-icon {
+            font-size: 1.2rem;
+        }
+    }
+}
+
+.program-breakdown, .fees-breakdown {
+    ion-card-header {
+        padding-left: 0;
+
+        ion-card-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: #141414;
+            line-height: 26px;
+        }
+    }
+
+    .breakdown {
+        display: grid;
+        grid-template-columns: 57% 40%;
+        justify-content: space-between;
+        row-gap: 1.5rem;
+
+        span {
+            display: flex;
+            gap: .6rem;
+            align-items: center;
+            color: #1E1E1E;
+
+            img {
+                width: 20px;
+                height: 20px;
+            }
+
+            ion-label {
+                font-size: 14px;
+                font-weight: 400;
+                display: flex;
+                flex-direction: column;
+                gap: .3rem;
+
+                span {
+                    font-size: 12px;
+                    color: #5D5D5D;
+                }
+            }
+        }
+    }
+}
+
+.description, .structure {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+
+    ion-card-header {
+        padding-left: 0;
+
+        ion-card-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: #141414;
+            line-height: 26px;
+        }
+    }
+
+    ion-card-content {
+        padding: 0;
+        color: #666666;
+        font-size: 16px;
+        font-weight: 400;
+
+        div {
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        div.collapsed {
+            max-height: 150px !important;
+        }
+
+        ion-button {
+            width: 100%;
+            background-color: #D9EDFF;
+            color: #184EC9;
+            text-align: center;
+            font-size: 16px;
+            font-weight: 500;
+            border-radius: 32px;
+            padding: 8px 16px;
+            margin-top: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+    }
+}
+
+.requirement {
+    ion-card-header {
+        padding-left: 0;
+
+        ion-card-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: #141414;
+            line-height: 26px;
+        }
+    }
+
+    ion-card-content {
+        display: flex;
+        flex-direction: column;
+        gap: .5rem;
+        color: #666666;
+        padding: 0;
+        font-size: 16px;
+        font-weight: 400;
+
+        div {
+            display: flex;
+            align-items: center;
+            gap: .5rem;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        div.collapsed {
+            max-height: 150px !important;
+        }
+
+        ion-button {
+            width: 100%;
+            background-color: #D9EDFF;
+            color: #184EC9;
+            text-align: center;
+            font-size: 16px;
+            font-weight: 500;
+            border-radius: 32px;
+            padding: 8px 16px;
+            margin-top: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+    }
+}
+
+ion-card-content {
+    padding-left: 0;
+
+    ion-card-title {
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 26px;
+        border-bottom: 1px solid #D1D1D1;
+        padding: 16px 0;
+    }
+
+    .list {
+        display: flex;
+        align-items: center;
+        gap: .5rem;
+        border-bottom: 1px solid #D1D1D1;
+        padding: 16px 0;
+
+        ion-icon {
+            width: 20px;
+            height: 20px;
+        }
+
+        div {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+
+            p {
+                font-size: 15px;
+                font-weight: 400;
+                color: #1E1E1E;
+            }
+            span {
+                color: #5D5D5D;
+                font-size: 13px;
+                font-weight: 400;
+            }
+        }
+    }
+}
+
+.footer {
+    position: relative;
+    padding: .5rem;
+    border-top: 1px solid #D1D1D1;
+    border-top-left-radius: 32px;
+    border-top-right-radius: 32px;
+
+    .school-info {
+        display: flex;
+        align-items: center;
+        gap: .8rem;
+        border-bottom: 1px solid #D1D1D1;
+        padding: .7rem .5rem;
+
+        img {
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+        }
+
+        div {
+            display: flex;
+            flex-direction: column;
+            gap: .5rem;
+
+            .name {
+                font-size: 16px;
+                font-weight: 500;
+                color: #1E1E1E;
+            }
+            .fee {
+                font-size: 16px;
+                font-weight: 500;
+                color: #184EC9;
+            }
+        }
+    }
+
+    .actions {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: .7rem;
+
+        ion-button {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            font-size: 13px;
+            border-radius: 32px;
+            padding: 8px 16px;  
+        }
+
+        .back {
+            background: #D9EDFF;
+            color: #184EC9;
+        }
+        .apply {
+            background: #184EC9;
+            color: #FFFFFF;
+        }
+    }
+}
