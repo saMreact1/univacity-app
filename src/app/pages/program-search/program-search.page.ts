@@ -60,20 +60,10 @@ export class ProgramSearchPage implements OnInit {
     })
   }
 
-  async openFilterModal() {
+  openFilterModal() {
     (document.activeElement as HTMLElement)?.blur();
 
-    const modal = await this.modalCtrl.create({
-      component: FilterModalComponent,
-    });
-    await modal.present();
-
-    const { data } = await modal.onWillDismiss();
-    if(data) {
-      this.program.filterPrograms(this.query, data).subscribe(list => {
-      this.displayed = list;
-    });
-    }
+    this.navCtrl.navigateForward('/filters');
   }
 
   removeFilter(filter: string) {
