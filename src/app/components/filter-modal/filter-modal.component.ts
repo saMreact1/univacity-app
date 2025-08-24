@@ -1,7 +1,7 @@
 import { NgFor } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { IonHeader, IonToolbar, IonButtons, IonIcon, IonTitle, IonContent, IonInput, IonRange, IonList, IonItem, IonLabel, IonFooter, IonButton } from "@ionic/angular/standalone";
+import { NavController } from '@ionic/angular';
 import { IonicModule } from "@ionic/angular";
 import { ActivatedRoute, RouterModule } from '@angular/router';
 
@@ -30,6 +30,7 @@ export class FilterModalComponent  implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
+    private navCtrl: NavController
   ) { }
 
   ngOnInit() {}
@@ -39,4 +40,7 @@ export class FilterModalComponent  implements OnInit {
     this.filters.forEach(f => f.value = 'None selected');
   }
 
+  goBack() {
+  this.navCtrl.back(); // goes back in history
+}
 }

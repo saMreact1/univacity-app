@@ -61,10 +61,12 @@ export class ProgramSearchPage implements OnInit {
   }
 
   async openFilterModal() {
+    (document.activeElement as HTMLElement)?.blur();
+
     const modal = await this.modalCtrl.create({
       component: FilterModalComponent,
     });
-    modal.present();
+    await modal.present();
 
     const { data } = await modal.onWillDismiss();
     if(data) {
