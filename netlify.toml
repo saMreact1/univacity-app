@@ -1,7 +1,7 @@
 [build]
   command = "ng build"
   functions = "netlify/functions"
-  publish = "dist/skoolly/browser"
+  publish = "dist/univacity-app/browser"
 
 
 [[redirects]]
