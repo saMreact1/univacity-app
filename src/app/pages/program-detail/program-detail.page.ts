@@ -1,5 +1,5 @@
 import { Component, CUSTOM_ELEMENTS_SCHEMA, Input, OnInit } from '@angular/core';
-import { CommonModule, NgIf } from '@angular/common';
+import { CommonModule, NgFor, NgIf } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { IonContent, IonHeader, IonTitle, IonToolbar, IonButtons, IonBackButton, IonIcon, IonButton, IonCardTitle, IonCardSubtitle, IonCard, IonCardHeader, IonCardContent, IonList, IonItem, IonLabel, IonSkeletonText, IonFooter } from '@ionic/angular/standalone';
 import { Program } from 'src/app/core/models/program';
@@ -22,6 +22,7 @@ import { ProgramService } from 'src/app/core/services/program';
     FormsModule,
     RouterModule,
     IonButton,
+    NgFor,
   ],
 })
 export class ProgramDetailPage implements OnInit {

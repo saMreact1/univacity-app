@@ -1,3 +1,47 @@
-<p>
-  filter-modal works!
-</p>
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-icon name="arrow-back" routerLink="/programs"></ion-icon>
+    </ion-buttons>
+
+    <ion-title>Filter</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <!-- Tuition Fee -->
+  <div class="filter-section">
+    <h2>Tuition fee</h2>
+    <div class="range-values">
+      <ion-input type="text" [value]="'$' + tuitionRange.lower.toLocaleString()" readonly></ion-input>
+      <ion-input type="text" [value]="'$' + tuitionRange.upper.toLocaleString()" readonly></ion-input>
+    </div>
+    <ion-range dualKnobs="true"
+      [min]="50000"
+      [max]="120000"
+      step="1000"
+      [(ngModel)]="tuitionRange"
+      color="primary">
+    </ion-range>
+  </div>
+
+  <ion-list lines="none" class="filter-list">
+    <ion-item *ngFor="let f of filters" button detail>
+      <ion-label>
+        <h3>{{ f.label }}</h3>
+        <p>{{ f.value }}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
+
+<!-- Footer -->
+<ion-footer>
+  <div class="footer-buttons">
+    <ion-button fill="clear" (click)="clearAll()">Clear all</ion-button>
+    <ion-button expand="block" class="results-btn">
+      View 1024 Results
+      <ion-icon slot="end" name="chevron-forward"></ion-icon>
+    </ion-button>
+  </div>
+</ion-footer>
