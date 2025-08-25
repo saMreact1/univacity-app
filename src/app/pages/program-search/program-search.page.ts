@@ -37,7 +37,6 @@ export class ProgramSearchPage implements OnInit {
   constructor(
     private program: ProgramService,
     private navCtrl: NavController,
-    private modalCtrl: ModalController
   ) { }
 
   ngOnInit() {
