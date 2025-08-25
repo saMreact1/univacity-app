@@ -81,11 +81,12 @@ ion-header {
             color: #5D5D5D;
         }
 
-        ion-input {
+        input {
             display: block;
             min-height: inherit;
             font-size: 14px;
             font-weight: 500;
+            border: none;
             color: #454545;
         }
     }
