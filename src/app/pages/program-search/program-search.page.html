@@ -1,17 +1,17 @@
 <ion-header>
-  <div>
+  <div class="header">
     <ion-icon name="arrow-back"></ion-icon>
-    <ion-item class="custom-search" lines="none">
-      <div>
+    <div class="custom-search" lines="none">
+      <span>
         <ion-label>What do you want to study?</ion-label>
         <ion-input
           value="Computer Technologies"
           [(ngModel)]="query"
         >
         </ion-input>
-      </div>
+      </span>
       <ion-icon slot="end" name="chevron-down"></ion-icon>
-    </ion-item>
+    </div>
   </div>
 
   <ion-toolbar fill="clear">
