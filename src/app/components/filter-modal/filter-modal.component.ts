@@ -37,7 +37,9 @@ export class FilterModalComponent  implements OnInit {
     private navCtrl: NavController
   ) { }
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.updatePositions({ detail: { value: this.tuitionRange } })
+  }
 
   updatePositions(event: any) {
   const range = event.detail.value;

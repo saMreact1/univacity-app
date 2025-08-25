@@ -6,7 +6,9 @@ import { routes } from './app/app.routes';
 import { AppComponent } from './app/app.component';
 import { provideHttpClient } from '@angular/common/http';
 import { addIcons } from 'ionicons';
+import { IonicModule } from '@ionic/angular';
 import { arrowBack, arrowForward, calendarOutline, checkmarkCircleOutline, checkmarkDone, chevronBack, chevronDown, chevronForward, chevronUp, close, eyeOutline, funnelOutline, heartOutline, informationCircleOutline, languageOutline, locationOutline, schoolOutline, shareSocialOutline, swapVertical, timeOutline, trendingUp } from 'ionicons/icons';
+import { importProvidersFrom } from '@angular/core';
 
 addIcons({
   'arrow-back': arrowBack,
@@ -38,6 +40,7 @@ bootstrapApplication(AppComponent, {
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
     provideIonicAngular(),
     provideRouter(routes, withPreloading(PreloadAllModules)),
-    provideHttpClient()
+    provideHttpClient(),
+    importProvidersFrom(IonicModule.forRoot())
   ],
 });
