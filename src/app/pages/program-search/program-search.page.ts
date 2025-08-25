@@ -25,7 +25,7 @@ import { FilterModalComponent } from 'src/app/components/filter-modal/filter-mod
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class ProgramSearchPage implements OnInit {
-  query: string = '';
+  query: string = 'Computer Technologies';
   filters: ProgramFilter = {}
   isFilterOpen: boolean = false;
   activeFilters: string[] = ['Design', 'Programming', 'Development', 'Design', 'Programming']
