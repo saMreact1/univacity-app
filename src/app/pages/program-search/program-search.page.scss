@@ -62,27 +62,32 @@ ion-header {
     --min-height: 50px;
     flex: 1;
     width: 100%;
-    margin: 6px 12px;
+    margin: 6px 0;
     border: 1px solid #e0e0e0;
     border-radius: 10px;
     display: flex;
     align-items: center;
 
-    ion-item {
-        width: 100%;
+    div {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
 
         ion-label {
+            width: 100%;
             font-size: 12px;
             color: #5D5D5D;
-            margin-bottom: 2px;
+            // margin-bottom: 2px;
         }
 
         ion-input {
             display: block;
-            height: 48px;
+            // height: 30px;
+            --padding: 0;
             font-size: 14px;
             font-weight: 500;
             color: #454545;
+            border: 1px solid red;
         }
     }
 
