@@ -1,4 +1,4 @@
-import { NgFor } from '@angular/common';
+import { DecimalPipe, NgFor } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { NavController } from '@ionic/angular';
@@ -13,7 +13,7 @@ import { ActivatedRoute, RouterModule } from '@angular/router';
     FormsModule,
     NgFor,
     IonicModule,
-    RouterModule
+    RouterModule,
 ]
 })
 export class FilterModalComponent  implements OnInit {

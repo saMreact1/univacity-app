@@ -14,12 +14,12 @@
     <div class="range-values">
       <div class="value-box">
         <span class="label">Min</span>
-        <ion-input type="text" [ngModel]="tuitionRange.lower.toLocaleString()" readonly></ion-input>
+        <ion-label>{{ tuitionRange.lower }}</ion-label>
       </div>
 
       <div class="value-box">
         <span class="label">Max</span>
-        <ion-input type="text" [ngModel]="tuitionRange.upper.toLocaleString()" readonly></ion-input>
+        <ion-label>{{ tuitionRange.upper }}</ion-label>
       </div>
     </div>
 

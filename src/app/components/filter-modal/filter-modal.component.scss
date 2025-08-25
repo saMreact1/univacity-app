@@ -68,10 +68,11 @@ ion-content {
     .value-box {
       display: flex;
       align-items: center;
-      justify-content: space-between;
-      gap: 0.4rem;
+      gap: 1rem;
       border-radius: 10px;
-      padding: 0 5px;
+      padding: 0 10px;
+      height: 56px;
+      width: 49%;
       border: 1px solid #D1D1D1;
 
       .label {
@@ -80,8 +81,8 @@ ion-content {
         color: #454545;
       }
 
-      ion-input {
-        --padding-start: 0.5rem;
+      ion-label {
+        padding: .5rem 1rem;
         --background: none;
         font-size: 16px;
         font-weight: 400;
