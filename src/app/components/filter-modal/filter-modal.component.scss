@@ -95,8 +95,7 @@ ion-content {
   .range-wrapper {
     position: relative;
     width: 100%;
-    padding-bottom: 1rem;
-    border: 1px solid red;
+    padding: 0 .7rem 1rem;
 
     ion-range {
       display: block;
@@ -112,8 +111,9 @@ ion-content {
       position: absolute;
       bottom: 10px;
       transform: translateX(-50%);
-      color: #151515;
-      padding: 2px 6px;
+      --background: #184EC9;
+      color: #184EC9;
+      padding: 2px .7rem;
       font-size: 14px;
       font-weight: 500;
       border-radius: 6px;
