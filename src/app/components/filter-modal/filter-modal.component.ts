@@ -6,6 +6,7 @@ import { IonicModule } from "@ionic/angular";
 import { ActivatedRoute, RouterModule } from '@angular/router';
 
 @Component({
+  standalone: true,
   selector: 'app-filter-modal',
   templateUrl: './filter-modal.component.html',
   styleUrls: ['./filter-modal.component.scss'],

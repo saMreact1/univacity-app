@@ -7,6 +7,7 @@
     --background: #fff;
     height: 100%;
     display: flex;
+    align-items: center;
 
     ion-button {
       color: #151515;
@@ -18,7 +19,7 @@
       }
     }
     
-    ion-title {
+    h3 {
       color: #141414;
       font-size: 24px;
       font-weight: 700;
