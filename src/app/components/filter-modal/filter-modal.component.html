@@ -1,31 +1,48 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-buttons slot="start">
+<div class="header">
+  <div class="toolbar" fill="clear">
       <ion-button fill="clear" routerLink="/">
-        <ion-icon name="chevron-back"></ion-icon>
+        <ion-icon name="arrow-back"></ion-icon>
       </ion-button>
-    </ion-buttons>
-
 
     <ion-title>Filter</ion-title>
-  </ion-toolbar>
-</ion-header>
+  </div>
+</div>
 
 <ion-content class="ion-padding">
   <!-- Tuition Fee -->
   <div class="filter-section">
     <h2>Tuition fee</h2>
     <div class="range-values">
-      <ion-input type="text" [value]="'$' + tuitionRange.lower.toLocaleString()" readonly></ion-input>
-      <ion-input type="text" [value]="'$' + tuitionRange.upper.toLocaleString()" readonly></ion-input>
+      <div class="value-box">
+        <span class="label">Min</span>
+        <ion-input type="text" [value]="tuitionRange.lower.toLocaleString()" readonly></ion-input>
+      </div>
+
+      <div class="value-box">
+        <span class="label">Max</span>
+        <ion-input type="text" [value]="tuitionRange.upper.toLocaleString()" readonly></ion-input>
+      </div>
     </div>
-    <ion-range dualKnobs="true"
-      [min]="50000"
-      [max]="120000"
-      step="1000"
-      [(ngModel)]="tuitionRange"
-      color="primary">
-    </ion-range>
+
+    <div class="range-wrapper">
+      <ion-range 
+        dualKnobs="true"
+        [min]="50000"
+        [max]="120000"
+        step="1000"
+        [(ngModel)]="tuitionRange"
+        color="primary"
+        (ionInput)="updatePositions($event)"
+        >
+      </ion-range>
+
+      <div class="bubble lower" [style.left.%]="lowerPercent">
+        {{ tuitionRange.lower / 1000 + 'k' }}
+      </div>
+      <div class="bubble upper" [style.left.%]="upperPercent">
+        {{ tuitionRange.upper / 1000 + 'k' }}
+      </div>
+    </div>
   </div>
 
   <ion-list lines="none" class="filter-list">
@@ -41,10 +58,10 @@
 <!-- Footer -->
 <ion-footer>
   <div class="footer-buttons">
-    <ion-button fill="clear" (click)="clearAll()">Clear all</ion-button>
-    <ion-button expand="block" class="results-btn">
+    <ion-button class="clear-btn" fill="clear" (click)="clearAll()">Clear all</ion-button>
+    <ion-button expand="block" fill="clear" class="results-btn">
       View 1024 Results
-      <ion-icon slot="end" name="chevron-forward"></ion-icon>
+      <ion-icon slot="end" name="arrow-forward"></ion-icon>
     </ion-button>
   </div>
 </ion-footer>

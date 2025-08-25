@@ -19,6 +19,9 @@ import { ActivatedRoute, RouterModule } from '@angular/router';
 export class FilterModalComponent  implements OnInit {
   tuitionRange = { lower: 50000, upper: 120000 };
 
+  lowerPercent = 0;
+  upperPercent = 100;
+
   filters = [
     { label: 'Institutes', value: 'None selected' },
     { label: 'Education Level', value: 'None selected' },
@@ -35,12 +38,21 @@ export class FilterModalComponent  implements OnInit {
 
   ngOnInit() {}
 
+  updatePositions(event: any) {
+  const range = event.detail.value;
+  const min = 50000;
+  const max = 120000;
+
+  this.lowerPercent = ((range.lower - min) / (max - min)) * 100;
+  this.upperPercent = ((range.upper - min) / (max - min)) * 100;
+}
+
   clearAll() {
     this.tuitionRange = { lower: 50000, upper: 120000 };
     this.filters.forEach(f => f.value = 'None selected');
   }
 
-  goBack() {
-  this.navCtrl.back(); // goes back in history
-}
+  // goBack() {
+  //   this.navCtrl.back(); // goes back in history
+  // }
 }
